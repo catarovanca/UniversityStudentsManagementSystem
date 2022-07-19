@@ -1,4 +1,4 @@
-package com.university.UniversityStudentManagementSystem.UI;
+package com.university.UniversityStudentManagementSystem;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

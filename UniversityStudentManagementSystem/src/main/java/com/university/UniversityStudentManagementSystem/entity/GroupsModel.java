@@ -12,13 +12,13 @@ public class GroupsModel {
     // specialty
     @OneToOne
     @MapsId
-    @JoinColumn(name= "specialityName")
+    @JoinColumn(name= "speciality_name")
     private SpecialityModel specialityModel;
 
     // student
     @OneToOne
     @MapsId
-    @JoinColumn(name = "studentNumber")
+    @JoinColumn(name = "student_number", referencedColumnName = "studentId")
     private StudentModel studentModel;
 
     public String getGroupName() {

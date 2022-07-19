@@ -5,6 +5,8 @@ import com.university.UniversityStudentManagementSystem.repository.UniversityRep
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class UniversityService {
 
@@ -13,5 +15,14 @@ public class UniversityService {
 
     public void addUniversity(UniversityModel universityModel) {
         universityRepository.save(universityModel);
+    }
+
+    public void removeUniversity(String universityName){
+        universityRepository.deleteByUniversityName(universityName);
+    }
+
+    public List<UniversityModel> listAllUniversities(){
+        List<UniversityModel> universityModels = universityRepository.findAll();
+        return universityModels;
     }
 }
